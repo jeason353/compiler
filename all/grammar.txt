@@ -1,0 +1,31 @@
+Q : P
+P : D
+P : S
+S : D S
+S : S S
+D : X IDN ;
+D : X IDN [ C ] ;
+C : CONST
+X : INT
+X : FLOAT
+S : IDN = E ;
+E : E + E
+E : E * E
+E : E - E
+E : E --
+E : E ++
+E : ( E )
+E : IDN
+E : CONST
+S : IF B { S }
+S : IF B { S } ELSE { S }
+S : WHILE B { S }
+B : ( B )
+B : E > E
+B : E < E
+B : E >= E
+B : E <= E
+B : E == E
+B : E != E
+B : CONST
+S : IDN [ C ] = E ;
